@@ -9,6 +9,18 @@ public class Exames {
 		this.nome = nome;
 		this.descr = descr;
 	}
+	public String getNome() {
+		return nome;
+	}
+	public String getDescr() {
+		return descr;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setDescr(String descr) {
+		this.descr = descr;
+	}
 	
 	
 }
