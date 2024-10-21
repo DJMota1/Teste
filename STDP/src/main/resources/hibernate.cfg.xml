@@ -4,7 +4,8 @@
  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
  <session-factory>
-<!-- !!!!!!!!!!!!,desbloqueia a criação de tabelas. -->
+ <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+<! !!!!!!!!!!!!,desbloqueia a criação de tabelas. -->
  <property name="hibernate.hbm2ddl.auto">create</property> 
  <!-- Database connection settings -->
  <!-- Set the Driver Class -->
@@ -19,6 +20,7 @@
  <property name="show_sql">true</property>
  <!-- Set the annotated classes (inform the complete namespace) -->
  <mapping class="com.upt.stdp.Symptom" />
+ <mapping class="com.upt.stdp.ClassTemp" />
 
  </session-factory>
 </hibernate-configuration>

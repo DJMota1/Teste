@@ -33,12 +33,12 @@ public class STDPMan {
 		}
 	}
 		
-	protected void createSymp(String na, String de) {
+	protected void createSymp(String name, String descr) {
 		System.out.println(sessionFactory);
 		Symptom symptom = new Symptom();
 		System.out.println(symptom);
-		symptom.setName(na);
-		symptom.setDescr(de);
+		symptom.setName(name);
+		symptom.setDescr(descr);
 		System.out.println(symptom);
 		System.out.println(sessionFactory);
 		
@@ -93,6 +93,19 @@ public class STDPMan {
 		session.getTransaction().commit();
 		session.close();
 		
+	}
+	//protected void createTemp(int o)
+	{
+		//		ClassTemp n1 = new ClassTemp();
+		//n1.setO(o);
+		
+		//Session session = sessionFactory.openSession();
+		//session.beginTransaction();
+		
+		//	session.persist(n1);
+		
+		//session.getTransaction().commit();
+		//session.close();
 	}
 
 	@Override

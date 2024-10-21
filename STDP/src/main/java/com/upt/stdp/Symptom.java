@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 public class Symptom {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column (name="id")
+	@Column (name="id")
 	private long id;
-	//@Column (name="name")
+	@Column (name="name")
 	private String name;
-	//@Column (name="descr")
+	@Column (name="descr")
 	private String descr;
 	
 	

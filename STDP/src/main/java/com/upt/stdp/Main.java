@@ -10,7 +10,11 @@ public class Main {
 		STDPMan sTDPMan = new STDPMan();
 		sTDPMan.setup();
 		classTemp.test();
-		sTDPMan.createSymp("Fadiga", "Cansaço agudo e prolongado.");
+		String name = "Fadiga";
+		String descr = "Cansaço agudo e prolongado.";
+		sTDPMan.createSymp(name, descr);
+//		int o = 0;
+//	    sTDPMan.createTemp(o);
 		sTDPMan.exit();
 		System.out.println(sTDPMan);
 	}
