@@ -53,15 +53,45 @@ public class STDPMan {
 		
 	}
 	
-	protected void readSymp() {
+	protected void readSymp(long n)
+	{
+		Session session = sessionFactory.openSession();
 		
+		Symptom symptom = session.get(Symptom.class, n);
+		System.out.println("Sintoma" + symptom.getName());
+		System.out.println("Descrição" + symptom.getDescr());
+		
+		session.close();
 	}
 	
-	protected void updateSymp() {
+	protected void updateSymp(long n,String na,String desc)
+	{
+		Symptom symptom= new Symptom();
+		symptom.setId(n);
+		symptom.setName(na);
+		symptom.setDescr(desc);
 		
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		session.merge(symptom);
+		
+		session.getTransaction().commit();
+		session.close();
 	}
 	
-	protected void deleteSymp() {
+	protected void deleteSymp(long n)
+	{
+		Symptom symptom = new Symptom();
+		symptom.setId(n);
+		
+		Session session= sessionFactory.openSession();
+        session.beginTransaction();
+		
+		session.delete(symptom);
+		
+		session.getTransaction().commit();
+		session.close();
 		
 	}
 
